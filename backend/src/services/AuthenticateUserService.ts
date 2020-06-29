@@ -7,7 +7,7 @@ import AppError from '../errors/AppError';
 
 import User from '../models/User';
 
-interface RequestDTO {
+interface Request {
     email: string;
     password: string;
 }
@@ -18,7 +18,7 @@ interface Response {
 }
 
 class AuthenticateUserService {
-    public async execute({ email, password }: RequestDTO): Promise<Response> {
+    public async execute({ email, password }: Request): Promise<Response> {
         const usersRepository = getRepository(User);
 
         const user = await usersRepository.findOne({
