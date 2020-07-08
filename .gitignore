@@ -1,2 +1,9 @@
+backend/.idea/
+backend/.vscode/
 backend/node_modules/
 backend/dist/
+backend/build/
+backend/temp/
+
+backend/tmp/*
+!backend/tmp/.gitkeep
